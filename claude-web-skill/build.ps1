@@ -20,7 +20,21 @@ $out = Join-Path $repo "dist"
 New-Item -ItemType Directory -Force $out | Out-Null
 $zip = Join-Path $out "fable-skill.zip"
 if (Test-Path $zip) { Remove-Item -Force $zip }
-Compress-Archive -Path $dest -DestinationPath $zip
+
+# Compress-Archive stores Windows-style backslash separators in zip entry
+# names, which violates the ZIP spec and gets rejected by claude.ai's skill
+# uploader ("Zip file contains path with invalid characters"). Build the
+# archive directly with System.IO.Compression so entries use forward slashes.
+Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zipStream = [System.IO.File]::Open($zip, [System.IO.FileMode]::Create)
+$archive = [System.IO.Compression.ZipArchive]::new($zipStream, [System.IO.Compression.ZipArchiveMode]::Create)
+Get-ChildItem -Path $stage -Recurse -File | ForEach-Object {
+    $relativePath = $_.FullName.Substring($stage.Length + 1).Replace('\', '/')
+    [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, $_.FullName, $relativePath, [System.IO.Compression.CompressionLevel]::Optimal) | Out-Null
+}
+$archive.Dispose()
+$zipStream.Dispose()
 
 Remove-Item -Recurse -Force $stage
 Write-Host "Built: $zip"
