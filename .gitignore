@@ -1,0 +1,14 @@
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor junk
+*.swp
+*~
+
+# Build output (claude.ai skill zip — attach to GitHub releases instead of committing)
+dist/
+
+# Note: .claude/ is intentionally NOT ignored — the /fable skill is part of the product.
+GITHUB-PUBLISH.md
