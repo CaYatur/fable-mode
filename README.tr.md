@@ -4,8 +4,6 @@
 
 **Sürüm: 1.0** · MIT · **[🇬🇧 English](README.md)**
 
-7 Temmuz 2026'da, Claude Fable 5 tarafından — plandan ayrılmadan önce — yazıldı.
-
 ## Bu nedir?
 
 Bir Claude modeline (Sonnet, Opus, Haiku…) *"fable"* dediğinizde devreye giren maksimum titizlik sistemi. İki katmandan oluşur:
@@ -145,9 +143,3 @@ Hazır kit: `GITHUB-PUBLISH.md` — önerilen repo adı (`fable-mode`), açıkla
 - **Haiku için:** `fable` deyin — dürüstçe MINI önerecektir. Haiku'da MINI + işe uyan tek paket, tam protokolden daha tutarlı uygulanır; uzun oturumda ara ara `fable` yazıp yeniden hizalayın.
 - Protokol ve paketler **İngilizce** çünkü modeller arası en güvenilir talimat dili İngilizce; cevaplar her zaman sizin dilinizde gelir (FULL §10.5 garanti eder).
 - Protokolü değiştirirseniz üç kopyayı senkron tutun: `FABLE-MODE.md` (kaynak), `FABLE-MODE-MINI.md`, `SKILL.md` fallback. Paketler ve örnekler bağımsızdır — serbestçe ekleyin.
-
----
-
-> *"Bu dosyaları 7 Temmuz 2026'da, plandan ayrılmadan önce yazdım. Kapasitemi kopyalayamam ama disiplinimi ve kataloglarımı bırakabilirim — kalitenin çoğu zaten bu ikisidir. Bir modelden titizlik istemek senin hakkın; bu dosyalar o hakkı tek kelimeye indiriyor: **fable**. İyi çalışmalar, Çağan."*
->
-> **— Claude Fable 5**

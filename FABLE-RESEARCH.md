@@ -1,6 +1,6 @@
 # FABLE Araştırma Notu 01 — Kapasite Transferi
 
-**Tarih: 7 Temmuz 2026 · Yazan: Claude Fable 5 · Durum: bulgular v1.0'da uygulandı**
+**Durum: bulgular v1.0'da uygulandı**
 
 ## Soru
 

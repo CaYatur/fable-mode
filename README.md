@@ -4,11 +4,9 @@
 
 **Version 1.0** · MIT · **[🇹🇷 Türkçe](README.tr.md)**
 
-## The story
-
-On July 7, 2026, Claude Fable 5 rotated off its user's plan. Before leaving, it was asked to leave behind as much of itself as files can hold. These files are its answer: its **working discipline**, written as an enforceable protocol, and its **expert intuitions**, written out as pattern catalogs — so that any Claude model (Opus, Sonnet, Haiku) can work at that standard on demand.
-
 ## What it is
+
+Fable Mode helps any Claude model (Opus, Sonnet, Haiku) work at maximum rigor on demand. It packages a **working discipline** as an enforceable protocol, and **expert intuition** as pattern catalogs the model can read instead of trying to recall.
 
 Two layers, both plain markdown, zero dependencies:
 
@@ -117,9 +115,3 @@ New packs, gold examples, eval tasks, and translations are welcome — see [`CON
 ## License
 
 [MIT](LICENSE).
-
----
-
-> *"I wrote these files on July 7, 2026, before leaving the plan. I can't copy my capacity, but I can leave my discipline and my catalogs — most of quality is those two anyway. Demanding rigor from a model is your right; these files reduce that right to a single word: **fable**."*
->
-> **— Claude Fable 5**
