@@ -2,7 +2,7 @@
 
 > **Make any Claude model work at maximum rigor. One trigger word: `fable`.**
 
-**Version 1.0** · MIT · **[🇹🇷 Türkçe](README.tr.md)**
+**Version 1.0.1** · MIT · **[🇹🇷 Türkçe](README.tr.md)**
 
 ## What it is
 
@@ -38,7 +38,7 @@ cat >> ~/.claude/CLAUDE.md <<'EOF'
 If the user says "fable", "fable mode", "act like Fable", or "/fable" (any casing):
 - Bare trigger: state your real model name, say honestly which version YOU can execute more reliably (Opus/Sonnet-class -> FULL at ~/.claude/FABLE-MODE.md; Haiku-class/fast tier -> MINI at ~/.claude/FABLE-MODE-MINI.md), then ask "FULL or MINI?" and list the packs in ~/.claude/FABLE-PACKS. The user's choice wins.
 - "fable full" -> FULL; "fable mini" -> MINI; "fable <pack>" -> recommended version + that pack. Read the chosen file(s) and follow them for the rest of the session; in FULL, auto-read the pack matching the task.
-- Announce with one line: "⚡ Fable Mode aktif (FULL|MINI) — <your real model name>". Deactivate only on "fable off".
+- Announce with one line: "⚡ Fable Mode active (FULL|MINI) — <your real model name>". Deactivate only on "fable off". Always reply and generate content in whatever language the user addresses you in.
 EOF
 ```
 
@@ -54,7 +54,7 @@ Add-Content -Encoding utf8 "$env:USERPROFILE\.claude\CLAUDE.md" @'
 If the user says "fable", "fable mode", "act like Fable", or "/fable" (any casing):
 - Bare trigger: state your real model name, say honestly which version YOU can execute more reliably (Opus/Sonnet-class -> FULL at ~/.claude/FABLE-MODE.md; Haiku-class/fast tier -> MINI at ~/.claude/FABLE-MODE-MINI.md), then ask "FULL or MINI?" and list the packs in ~/.claude/FABLE-PACKS. The user's choice wins.
 - "fable full" -> FULL; "fable mini" -> MINI; "fable <pack>" -> recommended version + that pack. Read the chosen file(s) and follow them for the rest of the session; in FULL, auto-read the pack matching the task.
-- Announce with one line: "Fable Mode aktif (FULL|MINI) — <your real model name>" prefixed with a lightning emoji. Deactivate only on "fable off".
+- Announce with one line: "Fable Mode active (FULL|MINI) — <your real model name>" prefixed with a lightning emoji. Deactivate only on "fable off". Always reply and generate content in whatever language the user addresses you in.
 '@
 ```
 
@@ -75,7 +75,7 @@ If the user says "fable", "fable mode", "act like Fable", or "/fable" (any casin
 | `fable deep` | **Investigation mode** for unknown problems — when you're stuck and the model would normally be too. The deliverable becomes a research log (facts / ruled out / ranked hypotheses / unaudited assumptions), resumable across sessions |
 | `fable off` | Deactivates |
 
-Confirmation line, always: `⚡ Fable Mode aktif (FULL|MINI + pack) — <model name>`. In FULL, the model auto-reads whichever pack matches the task. Natural phrasings ("act like Fable", "Fable 5 gibi davran") also trigger.
+Confirmation line, always: `⚡ Fable Mode active (FULL|MINI + pack) — <model name>`. In FULL, the model auto-reads whichever pack matches the task. Natural phrasings ("act like Fable", "analyze like Fable"), in any language, also trigger. The model replies and generates all content in whatever language you address it in.
 
 ## The packs
 

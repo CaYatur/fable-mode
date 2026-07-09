@@ -1,6 +1,6 @@
 # FABLE PACK — General Reasoning
 
-> Expert-pattern module for Fable Mode. **Load when:** any hard non-routine problem — decisions, analyses, estimates, writing, planning — coding or not. This is the "genel" pack: techniques that extract more of a model's latent capability on any topic.
+> Expert-pattern module for Fable Mode. **Load when:** any hard non-routine problem — decisions, analyses, estimates, writing, planning — coding or not. Techniques that extract more of a model's latent capability on any topic.
 
 ## Core moves
 

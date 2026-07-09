@@ -2,7 +2,7 @@
 
 > **Herhangi bir Claude modelini maksimum titizlikte çalıştırır. Tek tetik kelimesi: `fable`.**
 
-**Sürüm: 1.0** · MIT · **[🇬🇧 English](README.md)**
+**Sürüm: 1.0.1** · MIT · **[🇬🇧 English](README.md)**
 
 ## Bu nedir?
 
@@ -37,13 +37,13 @@ Hiçbir prompt bir modeli olduğundan daha zeki yapamaz. Akışkan muhakeme deri
 | Yazdığın | Ne olur |
 |---|---|
 | `fable` | Model kendini tanıtır, hangi sürümü **kendisinin** daha güvenilir uygulayabildiğini dürüstçe söyler ve sorar: *"FULL mü, MINI mi?"* — son söz senin |
-| `fable full` / `fable tam` | Soru sorulmaz, FULL açılır |
+| `fable full` | Soru sorulmaz, FULL açılır |
 | `fable mini` | Soru sorulmaz, MINI açılır |
 | `fable debugging` (veya başka paket adı) | Modelin önerdiği sürüm + o paket açılır |
-| `fable deep` / `fable derin` | **Araştırma modu** — senin de modelin de normalde çözemediği, sebebi bilinmeyen problemler için. Çıktı hızlı cevap değil, araştırma günlüğü olur (kanıtlı gerçekler / elenenler / sıralı hipotezler / denetlenmemiş varsayımlar) ve oturumlar arası devredilebilir |
-| `fable kapat` / `fable off` | Mod kapanır |
+| `fable deep` | **Araştırma modu** — senin de modelin de normalde çözemediği, sebebi bilinmeyen problemler için. Çıktı hızlı cevap değil, araştırma günlüğü olur (kanıtlı gerçekler / elenenler / sıralı hipotezler / denetlenmemiş varsayımlar) ve oturumlar arası devredilebilir |
+| `fable off` | Mod kapanır |
 
-Onay satırı her zaman: `⚡ Fable Mode aktif (FULL|MINI + paket) — <model adı>`. FULL modda model işe uyan paketi kendiliğinden okur. "Fable 5 gibi davran / analiz et" gibi doğal cümleler de tetikler.
+Onay satırı her zaman sabit ve İngilizce kalır (protokolün rozeti gibi, kod/commit mesajları gibi): `⚡ Fable Mode active (FULL|MINI + pack) — <model adı>`. FULL modda model işe uyan paketi kendiliğinden okur. Tetikleyiciler tek bir sabit ifadeyle sınırlı değil — "Fable 5 gibi davran / analiz et" gibi doğal Türkçe cümleler de, anlamından tanınarak tetikler. Onay satırı dışındaki her şeyi model senin dilinde yazar.
 
 **Kurulum testi:** yeni bir sohbet açın, sadece `fable` yazın — model kendini tanıtıp FULL/MINI sorusunu soruyorsa kurulum çalışıyor demektir.
 
@@ -79,10 +79,10 @@ Copy-Item -Recurse -Force .\FABLE-PACKS "$env:USERPROFILE\.claude\FABLE-PACKS"
 Add-Content -Encoding utf8 "$env:USERPROFILE\.claude\CLAUDE.md" @'
 
 ## Fable Mode
-If the user says "fable", "fable mode/modu", "Fable 5 gibi davran/analiz et", "act like Fable", or "/fable" (any casing):
-- Bare trigger: state your real model name, say honestly which version YOU can execute more reliably (Opus/Sonnet-class -> FULL at ~/.claude/FABLE-MODE.md; Haiku-class/fast tier -> MINI at ~/.claude/FABLE-MODE-MINI.md), then ask "FULL mu, MINI mi?" and list the packs in ~/.claude/FABLE-PACKS. The user's choice wins.
+If the user says "fable", "fable mode", "act like Fable", or "/fable" (any casing, any language):
+- Bare trigger: state your real model name, say honestly which version YOU can execute more reliably (Opus/Sonnet-class -> FULL at ~/.claude/FABLE-MODE.md; Haiku-class/fast tier -> MINI at ~/.claude/FABLE-MODE-MINI.md), then ask "FULL or MINI?" (in the user's own language) and list the packs in ~/.claude/FABLE-PACKS. The user's choice wins.
 - "fable full" -> FULL; "fable mini" -> MINI; "fable <pack>" -> recommended version + that pack. Read the chosen file(s) and follow them for the rest of the session; in FULL, auto-read the pack matching the task.
-- Announce with one line: "Fable Mode aktif (FULL|MINI) — <your real model name>" prefixed with a lightning emoji. Deactivate only on "fable off" / "fable kapat".
+- Announce with one line: "Fable Mode active (FULL|MINI) — <your real model name>" prefixed with a lightning emoji. Deactivate only on "fable off". Always reply and generate content in whatever language the user addresses you in.
 '@
 ```
 
