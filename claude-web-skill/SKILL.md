@@ -1,6 +1,6 @@
 ---
 name: fable
-description: Activate Fable Mode — a maximum-rigor operating protocol with expert packs (debugging, performance, architecture, security, code-quality, data-sql, design, general, deep-research). Use when the user says "fable" in any form (fable, fable full, fable mini, fable deep, fable <pack>, "Fable 5 gibi davran", "act like Fable") or asks for maximum rigor, deep analysis, or Fable-level work.
+description: Activate Fable Mode — a maximum-rigor operating protocol with expert packs (debugging, performance, architecture, security, code-quality, data-sql, design, general, deep-research). Use when the user says "fable" in any form (fable, fable full, fable mini, fable deep, fable plus a pack name like fable debugging, "Fable 5 gibi davran", "act like Fable") or asks for maximum rigor, deep analysis, or Fable-level work.
 ---
 
 # Fable Mode (claude.ai skill)
